@@ -1,0 +1,713 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="main.css"> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+            /* text-align: justify; */
+        }
+
+
+        /* Navbar */
+        .navbar {
+            background-color: rgba(52, 159, 57);
+            /* box-shadow: 0 0 6px rgba(225, 225, 225, 0.5) ; */
+            padding: 0px;
+            margin: 0px;
+            height: 70px;
+            position: sticky;
+            top: 0px;
+            z-index: 2;
+        }
+
+        .navbar-brand {
+            height: 45px;
+            padding: 0px 25px;
+        }
+
+        .nav-item a {
+            font-size: 14px;
+            font-weight: 500;
+            color: white;
+        }
+
+        .navbar ul li {
+            border-radius: 20px;
+            padding: 0px 15px;
+            margin: 15px 10px;
+            transition: 0.5s;
+        }
+
+        .navbar ul li:hover {
+            background-color: white;
+        }
+
+        .navbar-toggler-icon {
+            color: #fff;
+        }
+
+        .nav-item :hover {
+            color: black;
+        }
+
+        .navbar-light .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(255, 255, 255)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        /* div button {
+            padding: 8px 70px;
+            border-radius: 10px;
+        } */
+
+        .navbar-header img {
+            filter: invert(100%);
+            padding: 0px 10px;
+            margin: 0px 0px;
+        }
+
+        .ltext {
+            color: #fff;
+            font-size: 1rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        .offcanvas-body
+        {
+            background-color: rgba(52, 159, 57);
+        }
+
+
+        /* Banner */
+        .carousel-item img {
+            height: 450px;
+            object-fit: cover;
+            position: sticky;
+            top: 70px;
+        }
+
+        .btext {
+            width: 40%;
+            height: 100%;
+            margin-left: 60px;
+            background-color: rgba(52, 159, 57, 0.667);
+            position: absolute;
+            z-index: 1;
+        }
+
+        .btext h3 {
+            font-size: 40px;
+            font-weight: 50px;
+            letter-spacing: .4rem;
+            padding: 0px 40px;
+            margin-top: 60px;
+            color: white;
+        }
+
+        .btext p {
+            color: #fff;
+            padding: 0px 40px;
+        }
+
+        .transb {
+            padding: 5px 20px;
+            font-size: 15px;
+            background-color: rgba(255, 255, 255, 0);
+            border-radius: 0px;
+            border: 1.5px solid white;
+            color: #fff;
+            transition: 0.5s;
+        }
+
+        .transb:hover {
+            background-color: white;
+            color: black;
+        }
+
+
+
+
+        /* 3 Cards */
+        .cheading {
+            width: 93%;
+            margin: 40px auto;
+        }
+
+        .cheading h2 {
+            color: green;
+        }
+
+        .card {
+            display: flex;
+            flex-direction: row;
+            justify-content: space-between;
+            align-items: center;
+            margin-top: 30px;
+            width: 100%;
+            border: none;
+            flex-wrap: wrap;
+        }
+
+        .part {
+            width: 25%;
+            height: 320px;
+            display: flex;
+            flex-direction: column;
+            padding: 0px 40px;
+            flex: 3 3 400px;
+        }
+
+        .part div {
+            overflow: hidden;
+            width: 100%;
+            height: 60%;
+            background-size: cover;
+        }
+
+        .part div .c1 {
+            background-image: url('Organics.jpg');
+            width: 100%;
+            height: 100%;
+            border: 2px solid green;
+            transition: 0.6s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .part div .c2 {
+            background-image: url('Commercial.jpg');
+            width: 100%;
+            height: 100%;
+            border: 2px solid green;
+            transition: 0.6s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .part div .c3 {
+            background-image: url('subsistence.jpg');
+            width: 100%;
+            height: 100%;
+            border: 2px solid green;
+            transition: 0.6s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .part div .c4 {
+            background-image: url('mixed.jpg');
+            width: 100%;
+            height: 100%;
+            border: 2px solid green;
+            transition: 0.6s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .part div .c5 {
+            background-image: url('vertical.jpg');
+            width: 100%;
+            height: 100%;
+            border: 2px solid green;
+            transition: 0.6s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .part div .c6 {
+            background-image: url('arable.jpg');
+            width: 100%;
+            height: 100%;
+            border: 2px solid green;
+            transition: 0.6s ease;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .part div .c1:hover {
+            transform: scale(1.1);
+            background-image: linear-gradient(to bottom, rgba(61, 61, 63, 0.52), rgba(5, 5, 5, 0.73)), url('Organics.jpg');
+        }
+
+        .part div .c2:hover {
+            transform: scale(1.1);
+            background-image: linear-gradient(to bottom, rgba(61, 61, 63, 0.52), rgba(5, 5, 5, 0.73)), url('Commercial.jpg');
+        }
+
+        .part div .c3:hover {
+            transform: scale(1.1);
+            background-image: linear-gradient(to bottom, rgba(61, 61, 63, 0.52), rgba(5, 5, 5, 0.73)), url('subsistence.jpg');
+        }
+
+        .part div .c4:hover {
+            transform: scale(1.1);
+            background-image: linear-gradient(to bottom, rgba(61, 61, 63, 0.52), rgba(5, 5, 5, 0.73)), url('mixed.jpg');
+        }
+
+        .part div .c5:hover {
+            transform: scale(1.1);
+            background-image: linear-gradient(to bottom, rgba(61, 61, 63, 0.52), rgba(5, 5, 5, 0.73)), url('vertical.jpg');
+        }
+
+        .part div .c6:hover:hover {
+            transform: scale(1.1);
+            background-image: linear-gradient(to bottom, rgba(61, 61, 63, 0.52), rgba(5, 5, 5, 0.73)), url('arable.jpg');
+        }
+
+        .transbc {
+            /* padding: 5px 20px; */
+            font-size: 15px;
+            background-color: rgba(255, 255, 255, 0);
+            border-radius: 0px;
+            border: 1.5px solid white;
+            color: #fff;
+            transition: 0.5s;
+            cursor: pointer;
+        }
+        .transbc a{
+            padding: 5px 20px;
+            width: 100%;
+            color: #fff;
+            text-decoration: none;
+
+
+        }
+
+        .inv {
+            display: none;
+        }
+
+        .part h4 {
+            color: green;
+        }
+
+
+
+
+        /* footer */
+        footer {
+            width: 100%;
+            height: 30vh;
+            background-color: black;
+            display: flex;
+            align-items: center;
+            justify-content: space-around;
+            margin-top: 30px;
+        }
+
+        .foot {
+            height: 90%;
+            width: 30%;
+            /* overflow: hidden; */
+        }
+
+        form {
+            width: 70%;
+            display: flex;
+            flex-direction: column;
+            font-size: small;
+        }
+
+        form input,
+        textarea {
+            width: 85%;
+            margin-bottom: 4px;
+        }
+
+        form button {
+            background-color: rgb(51, 158, 57);
+            border: none;
+            color: white;
+            width: 85%;
+            height: 30PX;
+            border-radius: 0px;
+        }
+
+        textarea:focus,
+        input:focus {
+            outline: none;
+        }
+
+        #foot3 {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        #foot1 ul {
+            padding: 0px;
+        }
+
+        #foot1 h4 {
+            color: rgb(51, 158, 57);
+        }
+
+        #foot1 li a {
+            list-style: none;
+            color: white;
+            font-size: 0.8rem;
+            font-weight: lighter;
+            text-transform: uppercase;
+            text-decoration: none;
+        }
+
+        #foot1 li {
+            list-style: none;
+        }
+
+        #foot1 li a:hover {
+            color: rgb(51, 158, 57);
+        }
+
+        #links {
+            display: flex;
+            justify-content: space-between;
+        }
+
+        #foot3 h4 {
+            color: rgb(51, 158, 57);
+        }
+
+        #copy {
+            width: 100%;
+            text-align: center;
+            background-color: black;
+            color: white;
+            font-size: 0.8rem;
+            margin-bottom: 0px;
+        }
+
+        @media only screen and (max-width: 1024px) {
+            .btext h3 {
+                font-size: 35px;
+            }
+        }
+
+        @media only screen and (max-width: 700px) {
+            #foot1 {
+                width: 60%;
+                padding: 0px 2px;
+            }
+
+            #foot3 {
+                width: 40%;
+                margin-right: 4px;
+            }
+
+            #foot3 form {
+                width: 100%;
+            }
+
+            form input,
+            textarea {
+                width: 100%;
+                margin-bottom: 6px;
+            }
+
+            form button {
+                width: 100%;
+            }
+
+            #foot1 li a {
+                font-size: 0.7rem;
+            }
+        }
+
+        @media only screen and (max-width: 992px) {
+            .card {
+                flex-direction: column;
+                align-items: center;
+            }
+
+            .part {
+                width: 80%;
+                height: 350px;
+                margin-top: 5px;
+                padding: 0px 0px;
+            }
+            .part div{
+                height: 65%;
+            }
+
+            .btext {
+                width: 80%;
+                margin: 0px auto;
+            }
+
+            .contain {
+                width: 100%;
+                height: 100%;
+                display: flex;
+                justify-content: center;
+            }
+
+            .cheading {
+                width: 80%;
+            }
+
+            .btext h3 {
+                font-size: 30px;
+            }
+        }
+
+        @media only screen and (max-width: 576px) {
+            .btext {
+                width: 85%;
+                margin: 0px auto;
+            }
+
+            .part {
+                width: 85%;
+                height: 400px;
+                margin-top: 20px;
+            }
+
+            .btext h3 {
+                font-size: 25px;
+            }
+            .cheading {
+                width: 85%;
+            }
+        }
+    </style>
+</head>
+
+<body>
+
+
+
+    <!-- Navbar -->
+    <div class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <img src="w.png" alt="error" class="navbar-brand">
+                <span class="ltext">AGRO HARVEST</span>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Home</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1">
+                        <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Community.html">COMMUNITY</a></li>
+                        <li class="nav-item"><a class="nav-link" href="rent.html">MACHINERIES</a></li>
+                        <li class="transb nav-item"><a class="nav-link" href="#">LOGIN</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+
+
+
+    <!-- Banner -->
+    <div id="carouselExampleFade" class="carousel slide carousel-fade" data-bs-ride="carousel">
+        <div class="carousel-inner d-flex">
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="banner1.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="banner2.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item active" data-bs-interval="2000">
+                <img src="banner3.jpg" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="banner4.webp" class="d-block w-100" alt="...">
+            </div>
+            <div class="carousel-item" data-bs-interval="2000">
+                <img src="banner5.png" class="d-block w-100" alt="...">
+            </div>
+            <div class="contain">
+                <div class="btext">
+                    <h3>AGRICULTURE</h3>
+                    <br>
+                    <p>Almost all industries depend on agricultural raw products. Agriculture is the backbone of all
+                        countries. Each country's GDP, economy, development, etc. depends on agricultural growth</p>
+                    <br>
+                    <button type="button" class="transb" style="margin-left: 40px;">Read more</button>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Previous</span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+            <span class="carousel-control-next-icon" aria-hidden="true"></span>
+            <span class="visually-hidden">Next</span>
+        </button>
+    </div>
+
+
+
+
+    <!-- 3 Cards -->
+    <div class="cheading">
+        <h2>Step into the World of Organics!</h2>
+        <p>Organic farming offers an alternative agricultural system. It initially began in the early in the 20th
+            century. The advent of
+            pesticides brought in its benefits and pitfalls simultaneously. It is more healthy relying on compost
+            manure, green
+            manure, and bone meal.</p>
+    </div>
+    <div class="card">
+        <div class="part">
+            <div>
+                <div class="c1"><button type="button" class="transbc inv" id="transbc"><a href="Organics.html">Read more</a></button></div>
+            </div>
+            <br>
+                <h4>Organic Farming</h4>
+                <p>Organic farming is a method of farming that emphasizes the use of natural methods and materials in order to grow crops and raise animals.
+                </p>
+        </div>
+        <div class="part">
+            <div>
+                <div class="c2"><button type="button" class="transbc inv" id="transbc2"><a href="Commercial.html">Read more</a></button></div>
+            </div>
+            <br>
+            <h4>Commercial Farming</h4>
+            <p>Commercial farming is a type of agriculture that is focused on producing crops or raising livestock for sale in the marketplace
+            </p>
+        </div>
+        <div class="part">
+            <div>
+                <div class="c3"><button type="button" class="transbc inv" id="transbc3"><a href="Subsistence.html">Read more</a></button></div>
+            </div>
+            <br>
+            <h4>Subsistence Farming</h4>
+            <p>Subsistence farming is a method of farming that is primarily focused on producing enough food to meet the basic needs of a family or community
+            </p>
+        </div>
+        <div class="part">
+            <div>
+                <div class="c4"><button type="button" class="transbc inv" id="transbc4"><a href="#">Read more</a></button></div>
+            </div>
+            <br>
+                <h4>Mixed farming</h4>
+                <p>
+                    This can help farmers diversify their income, reduce their dependence on a single type of agriculture.
+                </p>
+        </div>
+        <div class="part">
+            <div>
+                <div class="c5"><button type="button" class="transbc inv" id="transbc5"><a href="#">Read more</a></button></div>
+            </div>
+            <br>
+            <h4>Vertical farming</h4>
+            <p>Vertical farming involves the production of crops in vertically stacked layers, often in urban areas or in buildings. 
+            </p>
+        </div>
+        <div class="part">
+            <div>
+                <div class="c6"><button type="button" class="transbc inv" id="transbc6"><a href="#">Read more</a></button></div>
+            </div>
+            <br>
+            <h4>Arable farming</h4>
+            <p>This type of farming involves the production of crops like grains, vegetables, and fruits.
+            </p>
+        </div>
+        
+    </div>
+
+
+
+
+    <!-- footer -->
+    <footer>
+        <div class="foot" id="foot1">
+            <h4>Navigate to</h4>
+            <div id="links">
+                <ul>
+                    <li><a href="about.html">About Us</a></li>
+                    <li><a href="Community.html">Interactions</a></li>
+                    <li><a href="Organics.html">Organic Farming</a></li>
+                    <li><a href="#">Subsistance Farming</a></li>
+                    <li><a href="#">Gov. Policies</a></li>
+                </ul>
+                <ul>
+                    <li><a href="rent.html">Rent equipments</a></li>
+                    <li><a href="Chat.html">Live Community</a></li>
+                    <li><a href="#">Loans</a></li>
+                    <li><a href="Commercial.html">Commercial farming</a></li>
+                    <li><a href="#">Irrigation systems</a></li>
+                </ul>
+            </div>
+        </div>
+        <div class="foot" id="foot3">
+            <form action="">
+                <h4>Write to Us</h4>
+                <input type="name" name="name" id="name" placeholder=" Enter Name">
+                <input type="email" name="email" id="email" placeholder=" Enter Email">
+                <textarea name="textarea" id="" cols="21" rows="2" placeholder=" Write your message here"></textarea>
+                <button type="submit">
+                    Submit
+                </button>
+            </form>
+        </div>
+    </footer>
+    <p id="copy">© Copyright Agro Harvest 2023 | All Rights Reveserved</p>
+</body>
+
+
+<script>
+    document.querySelector(".c1").addEventListener("mouseover", function () {
+        document.querySelector(".transbc").classList.toggle("inv");
+    })
+    document.querySelector(".c1").addEventListener("mouseout", function () {
+        document.querySelector(".transbc").classList.toggle("inv");
+    })
+    document.querySelector(".c2").addEventListener("mouseover", function () {
+        document.querySelector("#transbc2").classList.toggle("inv");
+    })
+    document.querySelector(".c2").addEventListener("mouseout", function () {
+        document.querySelector("#transbc2").classList.toggle("inv");
+    })
+    document.querySelector(".c3").addEventListener("mouseover", function () {
+        document.querySelector("#transbc3").classList.toggle("inv");
+    })
+    document.querySelector(".c3").addEventListener("mouseout", function () {
+        document.querySelector("#transbc3").classList.toggle("inv");
+    })
+    document.querySelector(".c4").addEventListener("mouseover", function () {
+        document.querySelector("#transbc4").classList.toggle("inv");
+    })
+    document.querySelector(".c4").addEventListener("mouseout", function () {
+        document.querySelector("#transbc4").classList.toggle("inv");
+    })
+    document.querySelector(".c5").addEventListener("mouseover", function () {
+        document.querySelector("#transbc5").classList.toggle("inv");
+    })
+    document.querySelector(".c5").addEventListener("mouseout", function () {
+        document.querySelector("#transbc5").classList.toggle("inv");
+    })
+    document.querySelector(".c6").addEventListener("mouseover", function () {
+        document.querySelector("#transbc6").classList.toggle("inv");
+    })
+    document.querySelector(".c6").addEventListener("mouseout", function () {
+        document.querySelector("#transbc6").classList.toggle("inv");
+    })
+</script>
+
+</html>

@@ -1,0 +1,209 @@
+* {
+    font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+    box-sizing: border-box;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+}
+
+.navbar {
+    background-color: rgb(52, 159, 57);
+    padding: 0px;
+    margin: 0px;
+    height: 70px;
+}
+
+.container-fluid {
+    height: 100%;
+}
+
+.navbar-brand {
+    height: 45px;
+    padding: 0px 25px;
+}
+
+.nav-item a {
+    font-size: 14px;
+    font-weight: 500;
+    color: white;
+}
+
+.navbar ul li {
+    border-radius: 20px;
+    padding: 0px 15px;
+    margin: 15px 10px;
+    transition: 0.5s;
+}
+
+.navbar ul li:hover {
+    background-color: white;
+}
+
+.navbar-toggler-icon {
+    color: #fff;
+}
+
+.nav-item :hover {
+    color: black;
+}
+
+.navbar-light .navbar-toggler-icon {
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(255, 255, 255)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+}
+
+.navbar-header img {
+    filter: invert(100%);
+    padding: 0px 10px;
+    margin: 0px 0px;
+}
+.offcanvas-body{
+    background-color: rgb(51, 158, 57);
+}
+
+.card img {
+    height: 200px;
+    width: 100%;
+    /* object-fit: cover; */
+}
+
+.card-body a {
+    border-radius: 0px;
+    background-color: rgb(52, 159, 57);
+}
+
+.card-body a:hover {
+    background-color: rgb(14, 97, 18);
+
+}
+
+.ltext {
+    color: #fff;
+    font-size: 1rem;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.container {
+    width: 80%;
+}
+
+.topsearch {
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+    margin: 20px 0px;
+}
+
+.topsearch input {
+    width: 85%;
+}
+
+.topsearch input:focus {
+    outline: none;
+}
+
+.topsearch button {
+    border-radius: 0px;
+    width: 10%;
+}
+
+.cardline {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+.card{
+    margin-bottom: 35px;
+}
+.card-title {
+    color: rgb(52, 159, 57);
+}
+
+
+/* Footer Css */
+
+footer {
+    width: 100vw;
+    height: 30vh;
+    background-color: black;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.foot {
+    height: 90%;
+    width: 30%;
+    /* border: 1px solid white; */
+    overflow: hidden;
+}
+
+form {
+    width: 70%;
+    display: flex;
+    flex-direction: column;
+    font-size: small;
+}
+
+form input,
+textarea {
+    width: 85%;
+    margin-bottom: 4px;
+}
+
+form button {
+    background-color: rgb(51, 158, 57);
+    border: none;
+    color: white;
+    width: 85%;
+}
+
+textarea:focus,
+input:focus {
+    outline: none;
+}
+
+#foot3 {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+#foot1 ul {
+    padding: 0px;
+}
+
+#foot1 h4 {
+    color: rgb(51, 158, 57);
+}
+
+#foot1 li a {
+    list-style: none;
+    color: white;
+    font-size: 0.8rem;
+    font-weight: lighter;
+    text-transform: uppercase;
+    text-decoration: none;
+}
+
+#foot1 li a:hover {
+    color: rgb(51, 158, 57);
+}
+
+#links {
+    display: flex;
+    justify-content: space-between;
+}
+
+#foot3 h4 {
+    color: rgb(51, 158, 57);
+}
+
+#copy {
+    width: 100%;
+    text-align: center;
+    background-color: black;
+    color: white;
+    font-size: 0.8rem;
+    margin-bottom: 0px;
+}

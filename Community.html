@@ -1,0 +1,289 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <!-- <link rel="stylesheet" type="text/css" href="main.css"> -->
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@500&display=swap" rel="stylesheet">
+    <title>Document</title>
+    <style>
+        * {
+            font-family: 'Montserrat', Verdana, Geneva, Tahoma, sans-serif;
+            /* text-align: justify; */
+        }
+
+
+        /* Navbar */
+        .navbar {
+            background-color: rgba(52, 159, 57);
+            /* box-shadow: 0 0 6px rgba(225, 225, 225, 0.5) ; */
+            padding: 0px;
+            margin: 0px;
+            height: 70px;
+            position: sticky;
+            top: 0px;
+            z-index: 2;
+        }
+
+        .navbar-brand {
+            height: 45px;
+            padding: 0px 25px;
+        }
+
+        .nav-item a {
+            font-size: 14px;
+            font-weight: 500;
+            color: white;
+        }
+
+        .navbar ul li {
+            border-radius: 20px;
+            padding: 0px 15px;
+            margin: 15px 10px;
+            transition: 0.5s;
+        }
+
+        .navbar ul li:hover {
+            background-color: white;
+        }
+
+        .navbar-toggler-icon {
+            color: #fff;
+        }
+
+        .nav-item :hover {
+            color: black;
+        }
+
+        .navbar-light .navbar-toggler-icon {
+            background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgb(255, 255, 255)' stroke-linecap='round' stroke-miterlimit='10' stroke-width='2' d='M4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+        }
+
+        .navbar-header img {
+            filter: invert(100%);
+            padding: 0px 10px;
+            margin: 0px 0px;
+        }
+
+        .ltext {
+            color: #fff;
+            font-size: 1rem;
+            font-weight: bold;
+            letter-spacing: 2px;
+        }
+        .transb {
+            padding: 5px 20px;
+            font-size: 15px;
+            background-color: rgba(255, 255, 255, 0);
+            border-radius: 0px;
+            border: 1.5px solid white;
+            color: #fff;
+            transition: 0.5s;
+        }
+
+        .transb:hover {
+            background-color: white;
+            color: black;
+        }
+
+
+        /* FAQ */
+        .community {
+            width: 100%;
+            height: 100vh;
+            background-size: cover;
+            background-image: url(banner4.webp);
+            background-image: linear-gradient(to bottom, rgba(93, 92, 92, 0.52), rgba(0, 0, 0, 0.73)), url('banner4.webp');
+            /* position: fixed; */
+            /* background-repeat: no-repeat; */
+            background-attachment: fixed;
+            overflow: scroll;
+            scrollbar-width: none;
+        }
+
+        .community::-webkit-scrollbar {
+            display: none;
+        }
+
+        .faq {
+            width: 100%;
+            height: auto;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            margin-top: 60px;
+        }
+
+        .accordion {
+            width: 90%;
+            --bs-accordion-active-bg: rgba(52, 159, 57);
+            --bs-accordion-btn-focus-box-shadow: none;
+            --bs-accordion-active-color: white;
+            --bs-accordion-border-color: green;
+        }
+
+        .gbutton {
+            padding: 0px 0px;
+            background-color: rgba(52, 159, 57);
+            font-size: 14px;
+            border-radius: 5px;
+            border: 1px solid rgb(0, 65, 14);
+            color: white;
+        }
+        .gbutton a{
+            padding: 7px 20px;
+            border-radius: 5px;
+            width: 100%;
+            color: #fff;
+            text-decoration: none;
+            display: block;
+            transition: 0.5s;
+        }
+
+        .gbutton a:hover {
+            /* width: 100%; */
+            background-color: white;
+            color: black;
+        }
+
+        .option {
+            width: 90%;
+            height: 37px;
+            margin-top: 40px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .accordion-button.collapsed {
+            border-bottom: 1px solid green;
+        }
+
+        .search {
+            padding: 6px 10px;
+            border-radius: 4px;
+            border: none;
+            caret-color: green;
+        }
+
+        .search:focus {
+            outline: none;
+        }
+    </style>
+</head>
+
+<body>
+    <!-- Navbar -->
+    <div class="navbar navbar-expand-lg navbar-light">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <img src="w.png" alt="error" class="navbar-brand">
+                <span class="ltext">AGRO HARVEST</span>
+            </div>
+            <button class="navbar-toggler" type="button" data-bs-toggle="offcanvas" data-bs-target="#offcanvasNavbar">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="offcanvas offcanvas-end" tabindex="-1" id="offcanvasNavbar">
+                <div class="offcanvas-header">
+                    <h5 class="offcanvas-title" id="offcanvasNavbarLabel">Home</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="offcanvas"></button>
+                </div>
+                <div class="offcanvas-body">
+                    <ul class="navbar-nav justify-content-end flex-grow-1">
+                        <li class="nav-item"><a class="nav-link" href="about.html">ABOUT</a></li>
+                        <li class="nav-item"><a class="nav-link" href="Community.html">COMMUNITY</a></li>
+                        <li class="nav-item"><a class="nav-link" href="rent.html">MACHINERIES</a></li>
+                        <li class="transb nav-item"><a class="nav-link" href="#">LOGIN</a></li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+
+<!-- FAQ -->
+<div class="community">
+    <div style="width: 100%; height: 50px; display: flex; justify-content: center;">
+        <div class="option">
+            <button type="button" class="gbutton"><a href="#">Ask a Question</a></button>
+            <button type="button" class="gbutton"><a href="Chat.html">Live Interaction</a></button>
+        </div>
+    </div>
+    <div class="faq">
+        <div class="accordion" id="accordionPanelsStayOpenExample">
+            <div style="width: 100%;display: flex; justify-content: space-between;margin-bottom: 20px;">
+                <h2 style="color: white; font-weight: bold; width: 50%; height: 10px;">Frequently Asked Questions</h2>
+                <input type="text" class="search" placeholder="Search">
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingOne">
+                    <button class="accordion-button" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseOne" aria-expanded="true"
+                        aria-controls="panelsStayOpen-collapseOne">
+                        How many different types of farming methods are there in India?
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseOne" class="accordion-collapse collapse show"
+                    aria-labelledby="panelsStayOpen-headingOne">
+                    <div class="accordion-body">
+                        Organic farming, subsistence farming, commercial farming are popular farming methods used in India. However, depending on geographical conditions, production demand, level of technology and labour, farming can be based on ley farming, horticulture, agroforestry, etc.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingTwo">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseTwo" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseTwo">
+                        What is the difference between agriculture and farming?
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseTwo" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingTwo">
+                    <div class="accordion-body">
+                        Agriculture is a vast term that involves growing crops and raising animals that provide food and utility resources. It also includes R&D, production, distribution, advanced technology, and more. While farming is part of agriculture that is plant or modern science based, involving cultivating soil to grow crops and rearing animals for their by-products.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingThree">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseThree" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseThree">
+                        Which soil is most suitable for agriculture?
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseThree" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingThree">
+                    <div class="accordion-body">
+                        Different soil types are found with unique physical, chemical and biological aspects. For example, alluvial soil is believed to be the most fertile soil with potassium and is appropriate for crops like sugarcane, paddy and others.
+                    </div>
+                </div>
+            </div>
+            <div class="accordion-item">
+                <h2 class="accordion-header" id="panelsStayOpen-headingFour">
+                    <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse"
+                        data-bs-target="#panelsStayOpen-collapseFour" aria-expanded="false"
+                        aria-controls="panelsStayOpen-collapseFour">
+                        What is a tractor subsidy?
+                    </button>
+                </h2>
+                <div id="panelsStayOpen-collapseFour" class="accordion-collapse collapse"
+                    aria-labelledby="panelsStayOpen-headingFour">
+                    <div class="accordion-body">
+                        Govt. of India offers a provision of subsidy over new tractors for promoting the mechanisation component of the Macro-Management Scheme of Agriculture. The scheme is open to all categories of farmers and follows a general subsidy pattern.
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</html>
